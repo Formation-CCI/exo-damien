@@ -1,6 +1,6 @@
 <?php 
     /* var_dump($_GET); */
-    if(isset($_GET['lang']))
+    if(array_key_exists('lang', $_GET))
     {
         if($_GET['lang'] == "fr")
             $message = "Bonjour";
@@ -15,6 +15,6 @@
             echo "<p>". $message . "</p>";
     }
 ?>
-<a href="get.php?lang=fr">Français</a>
-<a href="get.php?lang=eng">Anglais</a>
-<a href="get.php?lang=esp">Espagnol</a>
+<a href="?lang=fr">Français</a>
+<a href="?lang=eng">English</a>
+<a href="?lang=esp">Español</a>
