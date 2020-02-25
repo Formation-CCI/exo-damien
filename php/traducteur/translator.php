@@ -39,7 +39,7 @@
             <li><label>Sens de traduction : <select name="direction">
             <option value="eng">Français vers Anglais</option>
             <option value="fr">Anglais vers Français</option>
-        </select></label></li>
+            </select></label></li>
             <li><input type="submit" value="Traduire"></li>
         </ul>
     </form>
