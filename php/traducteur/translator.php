@@ -22,7 +22,6 @@
         else
             return false;
     } 
-
     $mot =  translate($_POST['word'],$_POST['direction']);
 ?>
 <!DOCTYPE html>
@@ -30,7 +29,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Traducteur PHP</title>
 </head>
 <body>
 <h2>Traducteur PHP</h2>
@@ -43,9 +42,6 @@
         </select></label></li>
             <li><input type="submit" value="Traduire"></li>
         </ul>
-       
-       
-       
     </form>
 </body>
 </html>
