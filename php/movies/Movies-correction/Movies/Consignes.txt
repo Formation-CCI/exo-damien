@@ -1,0 +1,39 @@
+Fichier « movies.json »
+--------------------------------------------------------------------------------
+
+	Contient la liste des films, au format Json.
+	Chaque film a, au minimum, un identifiant unique, un titre, une affiche 
+	(URL) et une durée (en minutes).
+	D'autres informations peuvent être ajoutées.
+
+
+Page d'accueil
+--------------------------------------------------------------------------------
+
+	Affiche la liste des films.
+	L'affiche (en miniature), le titre et la durée (en heures et minutes) de 
+	chaque film devront être visibles (au minimum).
+	Un lien permettra d'accéder à la fiche détaillée de chaque film.
+	Des filtres seront proposés afin de n'afficher que certains films :
+		-	Un champ permettant de rechercher les films dont le titre 
+			comprend les caractères saisis ;
+		-	Un champ permettant de rechercher les films ne dépassant pas la 
+			durée saisie (en minutes) ;
+		-	D'autres champs peuvent être ajoutés pour permettre de rechercher 
+			des films correspondant à d'autres critères (en fonction des 
+			informations disponibles, comme le genre, le réalisateur, les 
+			acteurs, etc.).
+
+
+Fiche détaillée
+--------------------------------------------------------------------------------
+
+	Toutes les informations du film seront visibles.
+
+
+Zone d'administration (bonus)
+--------------------------------------------------------------------------------
+
+	Elle sera accessible (sans identification) depuis un lien présent sur 
+	l'ensemble du site.
+	Elle permettra d'ajouter, de modifier et de supprimer des films.

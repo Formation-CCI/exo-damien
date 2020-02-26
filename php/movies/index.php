@@ -25,6 +25,16 @@
             }
         }
     }
+    if(array_key_exists('temps', $_GET) AND !empty($_GET['temps']))
+    {
+        foreach($films as $key => $film)
+        {
+            if($film['duration'] > $_GET['temps'])
+            {
+                unset($films[$key]);
+            }
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,6 +58,9 @@
                     <h3><?= $films['title'] ?></h3>
                     <img src="<?= $films['cover'] ?>" alt="<?= $films['title'] ?>">
                     <span><?= formatDuration($films['duration']) ?></span>
+                    <a href="movie.php?key=<?= $key ?>">
+                        <img src="" alt="">
+                    </a>
                 </div>
             <?php endforeach; ?>
     </article>
