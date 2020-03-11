@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <a href="index.php">Accueil</a>
+    <table>
+            <tr>
+                <th>Matières</th>
+                <th>Notes</th>
+                <th>Moyenne des notes par matière</th>
+            </tr>
+            <tr>
+                <?php foreach($matieres as $key2 => $values2):?>
+                    <td><?= $values2['libelle']?></td>
+                    <td><?= $values2['valeur']?></td>
+            </tr>    
+            <?php endforeach; ?>
+
+            <!-- <tr>
+                <?php foreach($moyenneEtudiant as $key => $values):?>
+                    <td><?= $values['libelle']?></td>
+                    <td><?= $values['MGE']?></td>
+            </tr>
+            <?php endforeach; ?>
+
+            <tr>
+            <?php foreach($moyenneGeneralMatiere as $key => $values):?>
+                    <td><?= $values['libelle']?></td>
+                    <td><?= $values['MGM']?></td>
+            </tr>
+            <?php endforeach; ?>
+
+            <tr>
+            <?php foreach($moyenneGeneral as $key => $values):?>
+                    <td><?= $values['libelle']?></td>
+                    <td><?= $values['MG']?></td>
+
+            </tr>
+            <?php endforeach; ?> -->
+            
+    </table>
+</body>
+</html>

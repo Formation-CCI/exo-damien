@@ -1,0 +1,25 @@
+<header>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
+</header>
+<body>
+    <nav>
+        <a href="../index.php">Accueil</a>
+        <span> | </span>
+        <a href="./index.php">Administration</a>
+    </nav>
+    <h1>Ajouter un film</h1>
+    <table>
+        <tr>
+        <form action="add-movie.php" method="post">
+            <td><input type="text" name="key" id="" placeholder="Identifiant"></td>
+            <td><input type="text" name="title" id="" placeholder="Titre"></td>
+            <td><input type="text" name="cover" id="" placeholder="Affichage(URL)"></td>
+            <td><input type="number" name="duration" id="" placeholder="Durée(en minutes)"></td>
+            <td><textarea name="synopsis" id="" cols="30" rows="10" placeholder="Synopsis"></textarea></td>
+            <td><button type="submit">Ajouter</button></td>
+        </form>
+        </tr>
+    </table>
+</body>

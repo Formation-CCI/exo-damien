@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<header>
+    <title>Movies | Editer</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
+</header>
+<body>
+    <nav>
+        <a href="../index.php">Accueil</a>
+        <span> | </span>
+        <a href="./index.php">Administration</a>
+    </nav>
+    <h1>Editer un film</h1>
+    <table>
+        <tr>
+        <form action="edit-movie.php" method="post">
+            <td><input type="hidden" name="key" id="" placeholder="Identifiant" value="<?= $_GET['key'] ?>"></td>
+            <td><input type="text" name="title" id="" placeholder="Titre" value="<?= $movie['title'] ?>"></td>
+            <td><input type="text" name="cover" id="" placeholder="Affichage(URL)" value="<?= $movie['cover']  ?>"></td>
+            <td><input type="number" name="duration" id="" placeholder="Durée(en minutes)" value="<?= $movie['duration']  ?>"></td>
+            <td><textarea name="synopsis" id="" cols="30" rows="10" placeholder="Synopsis"><?= $movie['synopsis']  ?></textarea></td>
+            <td><button type="submit">Ajouter</button></td>
+        </form>
+        </tr>
+    </table>
+</body>
