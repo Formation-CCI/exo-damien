@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/inscription.css">
+</head>
+<body>
+    <h1>Connexion</h1>
+    <form action="connexion.php" method="post">
+        <input type="email" name="mail">
+        <input type="password" name="motDePasse">
+        <input type="submit" value="Connexion">
+    </form>
+    <?php if(isset($erreur)):?><p><?= $erreur ?></p><?php endif?>
+</body>
+</html>

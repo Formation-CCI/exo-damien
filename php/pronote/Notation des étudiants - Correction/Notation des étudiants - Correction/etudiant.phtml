@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title><?= htmlspecialchars($etudiant['prenom']) ?> <?= htmlspecialchars($etudiant['nom']) ?></title>
+	</head>
+	<body>
+		<h1><?= htmlspecialchars($etudiant['prenom']) ?> <?= htmlspecialchars($etudiant['nom']) ?></h1>
+		<?php if(count($matieres) > 0): ?>
+			<table>
+				<thead>
+					<tr>
+						<th>Matière</th>
+						<th>Moyenne</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach($matieres as $matiere): ?>
+						<tr>
+							<td><?= htmlspecialchars($matiere['libelle']) ?></td>
+							<td><?= number_format($matiere['moyenne'], 2, ',', ' ') ?></td>
+						</tr>
+					<?php endforeach; ?>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th>Générale</th>
+						<th><?= number_format($etudiant['moyenneGenerale'], 2, ',', ' ') ?></th>
+					</tr>
+				</tfoot>
+			</table>
+		<?php else: ?>
+			<p>
+				Cet étudiant n'a aucune note.
+			</p>
+		<?php endif; ?>
+	</body>
+</html>

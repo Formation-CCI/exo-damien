@@ -19,9 +19,38 @@ input
 }
 
 /* INDEX */
-
+h1
+{
+    text-align: center;
+    padding: 20px;
+    background-color: #0f7d49;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 a
 {
     color: #0f7d49;
     font-weight: 600;
+}
+main
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

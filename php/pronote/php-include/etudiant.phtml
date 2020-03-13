@@ -9,41 +9,14 @@
 </head>
 <body>
     <a href="index.php">Accueil</a>
+    <p><?php echo $etudiant['nom'] . " " . $etudiant['prenom'] ?></p>
     <table>
             <tr>
                 <th>Matières</th>
-                <th>Notes</th>
-                <th>Moyenne des notes par matière</th>
-            </tr>
-            <tr>
-                <?php foreach($matieres as $key2 => $values2):?>
-                    <td><?= $values2['libelle']?></td>
-                    <td><?= $values2['valeur']?></td>
-            </tr>    
-            <?php endforeach; ?>
-
-            <!-- <tr>
-                <?php foreach($moyenneEtudiant as $key => $values):?>
+                <?php foreach($matieres as $values):?>
                     <td><?= $values['libelle']?></td>
-                    <td><?= $values['MGE']?></td>
+                <?php endforeach?> 
             </tr>
-            <?php endforeach; ?>
-
-            <tr>
-            <?php foreach($moyenneGeneralMatiere as $key => $values):?>
-                    <td><?= $values['libelle']?></td>
-                    <td><?= $values['MGM']?></td>
-            </tr>
-            <?php endforeach; ?>
-
-            <tr>
-            <?php foreach($moyenneGeneral as $key => $values):?>
-                    <td><?= $values['libelle']?></td>
-                    <td><?= $values['MG']?></td>
-
-            </tr>
-            <?php endforeach; ?> -->
-            
     </table>
 </body>
 </html>

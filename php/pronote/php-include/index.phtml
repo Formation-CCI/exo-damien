@@ -9,17 +9,19 @@
     </head>
     <body>
         <h1>Pronote</h1>
-
-        <?php if(count($etudiants) > 0): ?>
-            <ul>
-                <?php foreach($etudiants as $key => $values):?>
-                    <li><a href="etudiant.php?key=<?= intval($values['id']) ?>"><?= htmlspecialchars($values['nom']) . " " . htmlspecialchars($values['prenom']) ?></a></li>
-                <?php endforeach; ?>
-            </ul>
-        <?php endif ?>
-
+        <main>
+        <section>
+            <h2>Etudiant : </h2>
+            <?php if(count($etudiants) > 0): ?>
+                <ul>
+                    <?php foreach($etudiants as $key => $values):?>
+                        <li><a href="etudiant.php?id=<?= intval($values['id']) ?>"><?= htmlspecialchars($values['nom']) . " " . htmlspecialchars($values['prenom']) ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif ?>
+        </section>
         <?php if (count($etudiants) > 0 AND count($matieres) > 0): ?>
-
+        <section>
         <form action="./" method="post">
             <label>Etudiant</label>
             <select name="idEtudiant">
@@ -37,6 +39,8 @@
             <input type="number" name="note" min="0" max="20">
             <button type="submit">Ajouter</button>
         </form>
+        </section>
         <?php endif ?>
+        </main>
     </body>
 </html>

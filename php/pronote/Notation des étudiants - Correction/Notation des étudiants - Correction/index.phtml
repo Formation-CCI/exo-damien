@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Étudiants</title>
+	</head>
+	<body>
+		<h1>Étudiants</h1>
+		<!-- Message quant au résultat de l'ajout d'une note -->	
+		<?php if(isset($ajoutEffectue) AND $ajoutEffectue): ?>
+			<p>
+				Ajout effectué !
+			</p>	
+		<?php else if(isset($ajoutEffectue) AND !$ajoutEffectue): ?>
+			<p>
+				Ajout non effectué…
+			</p>
+		<?php endif; ?>
+		<!-- Liste des étudiants -->	
+		<h2>Étudiants</h2>
+		<?php if(count($etudiants) > 0): ?>
+			<ul>
+				<?php foreach($etudiants as $etudiant): ?>
+					<li>
+						<a href="etudiant.php?id=<?= intval($etudiant['id']) ?>">
+							<?= htmlspecialchars($etudiant['prenom']) ?> <?= htmlspecialchars($etudiant['nom']) ?>
+						</a>
+					</li>
+				<?php endforeach; ?>
+			</ul>
+		<?php else: ?>
+			<p>
+				Aucun étudiant dans la base de données.
+			</p>
+		<?php endif; ?>
+		<!-- Formulaire d'ajout d'une note -->	
+		<h2>Ajouter une note</h2>
+		<?php if(count($etudiants) > 0 AND count($matieres) > 0): ?>
+			<form action="./" method="post">
+				<label for="etudiant">Étudiant</label>
+				<select name="idEtudiant" id="etudiant">
+					<?php foreach($etudiants as $etudiant): ?>
+						<option value="<?= intval($etudiant['id']) ?>">
+							<?= htmlspecialchars($etudiant['prenom']) ?> <?= htmlspecialchars($etudiant['nom']) ?>
+						</option>
+					<?php endforeach; ?>
+				</select>
+				<label for="matiere">Matière</label>
+				<select name="idMatiere" id="matiere">
+					<?php foreach($matieres as $matiere): ?>
+						<option value="<?= intval($matiere['id']) ?>">
+							<?= htmlspecialchars($matiere['libelle']) ?>
+						</option>
+					<?php endforeach; ?>
+				</select>
+				<label for="note">Note</label>
+				<input type="number" name="note" id="note" min="0" max="20">
+				<button type="submit">Ajouter</button>
+			</form>
+		<?php else: ?>
+			<?php if(count($etudiants) < 1): ?>
+				<p>
+					Aucun étudiant dans la base de données.
+				</p>
+			<?php endif; ?>
+			<?php if(count($matieres) < 1): ?>
+				<p>
+					Aucune matière dans la base de données.
+				</p>
+			<?php endif; ?>
+		<?php endif; ?>
+	</body>
+</html>
